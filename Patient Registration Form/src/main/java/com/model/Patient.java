@@ -1,70 +1,83 @@
 package com.model;
 
 public class Patient {
-	private String Name;
-	private String Gender;
-	private String Phone;
-	private String DOB;
-	private String MaritalStatus;
-	private String PresentAddress;
-	private String CommunicationAddress;
-	private String PastMedicalHistory;
-	private String OtherDetails;
+	private int id;
+	private String fname;
+	private String lname;
+	private String email;
+	private String phone;
+	private String date_of_birth;
+	private String gender;
+	private String address;
+	private String marital_status;
+	private String medical_history;
+	private String details;
 	
-	public String getName() {
-		return Name;
+	public int getId() {
+		return id;
 	}
-	public void setName(String name) {
-		Name = name;
+	public void setId(int id) {
+		this.id = id;
 	}
-	public String getGender() {
-		return Gender;
+	public String getFname() {
+		return fname;
 	}
-	public void setGender(String gender) {
-		Gender = gender;
+	public void setFname(String fname) {
+		this.fname = fname;
+	}
+	public String getLname() {
+		return lname;
+	}
+	public void setLname(String lname) {
+		this.lname = lname;
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
 	}
 	public String getPhone() {
-		return Phone;
+		return phone;
 	}
 	public void setPhone(String phone) {
-		Phone = phone;
+		this.phone = phone;
 	}
-	public String getDOB() {
-		return DOB;
+	public String getDate_of_birth() {
+		return date_of_birth;
 	}
-	public void setDOB(String dOB) {
-		DOB = dOB;
+	public void setDate_of_birth(String date_of_birth) {
+		this.date_of_birth = date_of_birth;
 	}
-	public String getMaritalStatus() {
-		return MaritalStatus;
+	public String getGender() {
+		return gender;
 	}
-	public void setMaritalStatus(String maritalStatus) {
-		MaritalStatus = maritalStatus;
+	public void setGender(String gender) {
+		this.gender = gender;
 	}
-	public String getPresentAddress() {
-		return PresentAddress;
+	public String getAddress() {
+		return address;
 	}
-	public void setPresentAddress(String presentAddress) {
-		PresentAddress = presentAddress;
+	public void setAddress(String address) {
+		this.address = address;
 	}
-	public String getCommunicationAddress() {
-		return CommunicationAddress;
+	public String getMarital_status() {
+		return marital_status;
 	}
-	public void setCommunicationAddress(String communicationAddress) {
-		CommunicationAddress = communicationAddress;
+	public void setMarital_status(String marital_status) {
+		this.marital_status = marital_status;
 	}
-	public String getPastMedicalHistory() {
-		return PastMedicalHistory;
+	public String getMedical_history() {
+		return medical_history;
 	}
-	public void setPastMedicalHistory(String pastMedicalHistory) {
-		PastMedicalHistory = pastMedicalHistory;
+	public void setMedical_history(String medical_history) {
+		this.medical_history = medical_history;
 	}
-	public String getOtherDetails() {
-		return OtherDetails;
+	public String getDetails() {
+		return details;
 	}
-	public void setOtherDetails(String otherDetails) {
-		OtherDetails = otherDetails;
-	}
-	
+	public void setDetails(String details) {
+		this.details = details;
+	}	
 	
 }
