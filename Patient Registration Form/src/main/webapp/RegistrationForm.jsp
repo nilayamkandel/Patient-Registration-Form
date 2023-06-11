@@ -1,55 +1,77 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Patient Registration</title>
+<meta charset="ISO-8859-1">
+<title>Patient</title>
 </head>
 <body>
-	<h2>Patient Registration form</h2>
-	Name   <input type ="text" name ="fname" placeholder ="First name">
-		   <input type ="text" name ="lname" placeholder ="Last name"><br>
+	<h1>Patient</h1>
 	
-	<p>  Gender <input type = "radio" id="female">
-		   <label for="female">F</label>
-		   <input type = "radio" id="male">
-		   <label for="male">M</label><br></p>
-		   
-	<p>Phone  <input type ="tel" name ="phone" ><br></p>
 	
-	<p>DOB    <input type ="date" id="dob"><br></p>
-	 
-	<p>Marital Status <input type = "radio" id="married">
-		   <label for="married">M</label>
-		   <input type = "radio" id="unmarried">
-		   <label for="unmarried">U</label><br></p>
+	<form action="RegistrationFormServlet" method="post">
 	
-	<p>Present Address   <input type ="text" name ="Paddress" ><br>	</p> 
-	 
-	Communication Address   <input type ="text" name ="Caddress" >
+    <label for="first_name">First Name</label>&nbsp;
+    	<input type="text" id="first_name" name="fname" required><br><br>
+
+    <label for="last_name">Last Name</label>&nbsp;
+    	<input type="text" id="last_name" name="lname" required><br><br>
+
+    <label for="email">Email</label>&nbsp;
+    	<input type="email" id="email" name="email" required><br><br>
+
+    <label for="phone">Phone</label>&nbsp;
+    	<input type="tel" id="phone" name="phone" required><br><br>
+    	
+     <label for="marital">Marital Status</label>&nbsp;
+		<input type="radio" id="marital" name="marital_status" value="married">Married	 
+		<input type="radio" id="marital" name="marital_status" value="unmarried">Unmarried	   
+		<br><br>
+
+    <label for="date_of_birth">Date of Birth</label>&nbsp;
+   	 <input type="date" id="date_of_birth" name="date_of_birth" required><br><br>
+
+    <label for="gender">Gender</label>&nbsp;
+	    <select id="gender" name="gender">
+	      <option value="male">Male</option>
+	      <option value="female">Female</option>
+	      <option value="other">Other</option>
+	    </select><br><br>
+
+    <label for="address">Address</label>&nbsp;
+    	<input id="address" name="address" required><br><br>    
+    
+   <label for="medical">Past Medical History<br>
+	   
+	    &nbsp;&nbsp;&nbsp;
+	    <input type="checkbox" name="medical_history" id="medical"  value="anemia">Anemia 
+	    	
+	    <input type="checkbox" name="medical_history" id="medical" value="asthama"> Asthama 
+	    	
+	    <input type="checkbox" name="medical_history" id="medical" value="diabetes"> Diabetes 
+	    <br>
+	    
+	   	&nbsp;&nbsp;&nbsp;	
+	    <input type="checkbox" name="medical_history" id="medical" value="cancer"> Cancer 
+	    
+	    <input type="checkbox" name="medical_history" id="medical" value="ulcer"> Ulcer 
+	    
+	    <input type="checkbox" name="medical_history" id="medical" value="chickenpox"> Chickenpox 
+	    	
+	    <br>&nbsp;&nbsp;&nbsp;&nbsp;
+	    Other &nbsp;<input id="medical" name="medical_history"><br><br>
+	    
+    </label>
+    
+    
+   <label for="detail">   
+   		Other Details <input id="detail" name="details" >
+   	</label>
+	<br><br>
+
+
+    <input type="submit" value="Register">
+  </form>	
+
 	
-	<p>Past Medical History</p>	
-	<input type="checkbox" name="anemia" >
-	<label for="anemia"> Anemia</label>
-	<input type="checkbox" name="asthma" >
-	<label for="asthma"> Asthma</label>
-	<input type="checkbox" name="diabetes" >
-	<label for="diabetes"> Diabetes</label><br>
-	<input type ="checkbox" name="cancer">
-	<label for="cancer">Cancer</label>
-	&nbsp;
-	<input type ="checkbox" name="ulcer">
-	<label for="ulcer">Ulcer</label>
-	&nbsp;&nbsp;
-	<input type ="checkbox" name="chickenpox">
-	<label for="chickenpox">Chickenpox</label><br>
-	<input type ="checkbox" name="other">
-	<label for="other">Other</label>
-	<input type="text" name="other"><br>
-	
-	<p>Other Details   <input type ="text" name ="details" ></p>   
-		
-		
 </body>
 </html>
